@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<style type="text/css">
+		h2
+		{
+			color:white;
+			background-color: green;
+			text-align: center;
+			margin-left: 250px;
+			margin-right: 250px;
+			/*margin:250px;*/
+			padding: 4px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sample.css' %}">
+</head>
+<body>
+	<h2>Register</h2>
+	<form method="post">
+		{% csrf_token %}
+		<label>Full Name: </label>
+		<input type="text" name="fname"><br/><br/>
+		<label>Email: </label>
+		<input type="email" name="mk"><br/><br/>
+		<input type="submit" value="register">
+	</form>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+Day2(02-02-2021):
+==================
+packages and modules:
+-----------------------
+pkg-->folder
+...>it is collecion of modules
+
+modules: classes and methods
+
+
+import pakagename
+
+from package import classname
+
+form packagename.clasname import methodname(m)
+from pkgname.classname import *
+
+
+Django intro
+
+Django installation
+
+Django project creation
+
+Django app creation

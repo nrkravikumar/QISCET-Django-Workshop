@@ -1,0 +1,471 @@
+02-02-2021:
+==========
+
+
+Python Version Check:
+=====================
+	- python --version
+
+Django Installation:
+====================
+	- pip install django
+			(or)
+	- pip install django == 3.0
+
+Django version check:
+=====================
+	- django-admin --version
+		(or)
+	Another way but we need to import python first and then we need to do these steps
+	
+	- import django
+	- django.get_version()
+	  
+Django Project Creation:
+========================
+	- django-admin start projectname
+	
+	- [Projectname]
+		- [Projectname] => [Admin App]
+		- manage.py => services
+
+		
+Files created in Admin app [Same as projectname]:
+=================================================
+- init -> python interpreter considers as a python file
+- asgi -> asynchronous gateway interface[it is used at development state]
+- wsgi -> web socket gateway interface[It is used for development state for request and response from users]
+- settings -> all configurations are done in this file like app config,database config, email config
+- urls -> url of the app or valid url that is to be checked in the browser
+
+
+=> Manage.py:
+=============
+	- All services like creation of userapp,shell for database [creation,updation,deletion or view of a records in shell], running the server to execute our app. Migrations, migrate etc.,
+
+To execute our app:
+===================
+	- First we need to navigate where manage.py is existing
+	- manage.py runserver
+	* if the python path is not set in environment variables then we need to mention python 
+	- python manage.py runserver
+	- while running the server it creates sqlite file by default
+	- To change the port then we need to use the port numbers as given below
+	- python manage.py runserver 8080
+	
+	=> To run our app in browser then we need to use the ip and port or else by default it can be access the name as "localhost"
+	
+	- localhost:8000
+			(or)
+	- localhost:different port if any conflict
+			(or)
+	- http://127.0.0.1:8000
+	
+	* To break a server we need to use cntrl + c (or) cntrl + b
+	
+To Create Userapp:
+==================
+	- django-admin startapp appname
+			(or)
+	- manage.py startapp appname
+			(or)
+	- python manage.py startapp appname
+
+Created Files in Userapp Creation:
+==================================
+ - init - python interpreter considers as a python file
+ - admin - To display the tables in admin app [django-admin]
+ - apps - To configure in development
+ - views - Main Logic
+ - tests - Test cases Like [unit testing]
+ - models - Database Creations
+
+To access our app we need to configure our user app in settings.py:
+==================================================================
+
+ - INSTALLED_APPS = [
+	.......,
+	'we need to use our appname here',
+	]
+
+Creating our own url:
+=====================
+	path('',views.ourfunctionname,userdefinedname),
+	
+	= In path first parameter is your own path
+	= views.some functioanname => we need to create a function in views.py Its completely our actions
+	= name this can be used in interlink of one template to other 
+	
+ => HttpResponse is for displaying the response but it doesnt display the html content in a browser
+
+
+localhost:8000/ty/11AK1a01219/
+
+Hi Welcome 11AK1a01219
+
+Text => 
+	background => red color,
+	textcolor => blue
+rollno => alert()
+HTML & CSS:
+-------------
+w3schools
+
+<h1>...<h6>
+<p>
+<head>
+<body>
+<html>
+<i>
+<ul>
+<ol>
+<table>
+<th>
+<td>
+<tr>
+<hr>
+<footer>
+<pre>
+<form>
+<input>
+<button>
+<span>
+<a>
+
+<html>
+<head>
+links
+</head>
+<body>
+tags
+</body>
+</html>
+tags
+css
+
+
+1. url => views => response[string]
+2. url => views => html tags [html]
+3. url => views => html,css 
+4. url => views => html,css,javascript
+5. url => views => html file [templates]
+6. url => views => html[form,css] => views
+7. url => views => html[form] => views => html
+
+
+
+03-02-2021:
+===========
+Templates:
+==========
+	foldername for user purpose
+	-> only .html
+	 
+	
+Static File handling:
+=====================
+
+settings.py static
+
+Static:
+=======
+	-> External Files like [css,js,jquery,images,audio/video]
+	-> css => .css
+	-> js => .js
+	-> jquery => .js
+	-> images => .png,.jpg,.jpeg,.gif
+
+DTL => Django Template Language
+  
+syntax: {% load static %}
+
+
+methods: 
+========
+	- GET => by default get will be accessed,Data can be visible in url of a browser,2048 characters
+	- POST => sensitive information it cant displays the data in url,bulk data can be allowed to server to store the information
+
+dtl => form => server 
+	{% csrf_token %}
+
+html => .py[views => controller]
+print(variablename) => server [output]
+
+dtl => Variable => {{varaible_name}}
+
+margin,padding => point => 1 - 5
+
+bootstrap-4
+
+m - x => left,right
+  - y => top,bottom
+
+grid system:
+============
+	- large => lg
+	- medium  => md
+	- small => sm
+	- very small => xm
+
+12 grids 
+	-> 6 6 
+	-> 4 8
+	-> 4 4 4
+	-> 3 6 3
+
+colors => primary,secondary,warning,success,info,danger,light,dark
+
+Day4:
+=======
+* using shell to perform CRUD operations
+
+* model creation
+
+* registration  ...>create
+				...>read
+				...>update
+				...>delete
+				
+* Email sent (OTP generation)
+
+Database => To store a record => Mysql,Postgresql,NOSQL,Mongo Db,Sqlite3
+ 
+[SQL => Query]
+create database;
+create table table_name
+(
+	fieldnames datatype;
+)
+
+select * from tablename;
+
+
+
+ORM => Object Relational Mapping
+
+object_name = classname.objects.all()
+object_name.fieldname
+
+CRUD Operations:
+================
+	C -> Create
+	R -> Read
+	U -> Update
+	D -> Delete
+	
+manage.py => shell
+cmd => manage.py shell
+
+db.sqlite3 => [database]
+
+Models.py:
+==========
+from django.db import models
+
+class class_name(models.Model):
+	fieldname = models.datatype
+
+demo_class_name
+
+datatypes:
+==========
+	- CharField()
+	- IntegerField()
+	- ChoiceField()
+	- FileField()
+	- ImageField()
+
+server: stop
+=======
+	- manage.py makemigrations
+	- manage.py migrate
+	
+0001_initinal.py => interfacing file
+
+Shell:
+=======
+cmd => manage.py shell
+
+first we need to import our model
+
+=> from Demo.models import UsrReg
+
+=> UsrReg._meta.get_fields()
+
+create:
+	- single record:
+		=> classname.objects.create(fieldname='value')
+		
+		=> objectname = classname(fieldname='value')
+		=> objectname.save()
+
+Reading:
+	- get => single record access
+		  => Duplicates can't be fetched
+	- filter => multiple records
+			 => It can allows the duplicate values
+
+- To display all records in a table
+	=> objectname = classname.objects.all()
+	=> print(objectname)
+	Here we can print only objects not values of a record
+- To display the values in a table then we need to use loop
+	=> objectname = classname.objects.all()
+	=> for i in objectname:
+			print(i.fieldname)
+	=> if we need to access other fieldnames then we need to access those values by placing the fieldnames in print statement
+
+Get:
+===
+	- To access the particular value then we need to check it by using the fieldname and compare with the value
+		=> objectname = classname.objects.get(fieldanme=value)
+		=> objectname.fieldname
+	- Here if the value is existed then it displays the output if not it will displays the error
+	
+	Ex:
+		k = UsrReg.objects.get(id=2)
+		print(k.user_name) [If it exists]
+		
+
+Filter:
+=======
+	- To access all values related to that particular value then we need to access the filter. here all the values related to that value is to be accessed
+	- objectname = classname.objects.filter(fieldname=value)
+	Ex:
+	
+	p = UsrReg.objects.filter(age=20)
+	print(p) [it displays only object names]
+	
+	for k in p:
+		print(k.user_name,k.age)
+	
+Update:
+=======
+	- Single record update
+	=> we need to get it from our database
+		=> objectname = classname.objects.get(fieldname=value)
+		=> objectname.fieldname=value
+		=> objectname.save()
+	- Column update
+	=> We need to fetch all details from our database
+		=> objectname=classname.objects.all().update(fieldname=value)
+	=> Here there is no need of save()
+	
+Delete:
+=======
+	- Single Record
+	=> we need to get it from our database
+	=> Objectname = classname.objects.get(fieldname=value)
+	=> objectname.delete()
+	- Multiple Records
+	=> we need to get all records from database
+	=> objectname = classname.objects.all().delete()
+	=> objectname = classname.objects.all()
+	=> objectname.delete()
+
+
+git-scm.com
+
+git init
+git add .
+git commit -m "msg"
+git config --global user.name "username"
+git config --global user.email "email"
+
+git commit -m "msg"
+
+github acount
+ new repositery
+ 
+ repositry link
+ 
+ git remote
+ 
+ git remote add origin repostrylink
+ 
+ git remote
+ 
+ git push origin master
+ 
+ 
+ ==============================
+ 
+ git init
+ 
+ (master)
+ 
+ git branch main
+ 
+ git branch -d master
+ 
+ git checkout main
+ 
+ git remote add origin "url"
+  
+ touch a.c
+ 
+ git add .
+ 
+ git commit -m "something message"
+ 
+ git push origin main
+ 
+  
+
+CRUD:
+=====
+	C => Create
+	R => Read [View]
+	U => Update
+	D => Delete
+
+views: httpresponse(""),
+	redirect("/urlname"),
+
+message:
+========
+	alert,notification
+	
+	views.py
+	from django.contrib import messages
+	message.success(request,"text")
+	
+	messages.success
+	messages.debug
+	messages.info
+	messages.warning
+	
+	html:
+	{% if messages %}
+	{% for t in messages %}
+		<div class="alert alert-{{t.tags}} alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		{{t}}
+		</div>
+	{% endfor %}
+	{% endif %}
+	
+	
+Admin:
+======
+	=> All actions are to be performed for tables
+	=> manage.py createsuperuser
+
+	=> Other tables to be viewed for admin then we need to
+	register in admin.py
+	
+	
+	QIS => https://github.com/nrkravikumar
+		   https://github.com/Matampalli satheesh
+ 
+
+
+
+
+
+
+
+
+
+
+

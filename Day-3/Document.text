@@ -1,0 +1,222 @@
+02-02-2021:
+==========
+
+
+Python Version Check:
+=====================
+	- python --version
+
+Django Installation:
+====================
+	- pip install django
+			(or)
+	- pip install django == 3.0
+
+Django version check:
+=====================
+	- django-admin --version
+		(or)
+	Another way but we need to import python first and then we need to do these steps
+	
+	- import django
+	- django.get_version()
+	  
+Django Project Creation:
+========================
+	- django-admin start projectname
+	
+	- [Projectname]
+		- [Projectname] => [Admin App]
+		- manage.py => services
+
+		
+Files created in Admin app [Same as projectname]:
+=================================================
+- init -> python interpreter considers as a python file
+- asgi -> asynchronous gateway interface[it is used at development state]
+- wsgi -> web socket gateway interface[It is used for development state for request and response from users]
+- settings -> all configurations are done in this file like app config,database config, email config
+- urls -> url of the app or valid url that is to be checked in the browser
+
+
+=> Manage.py:
+=============
+	- All services like creation of userapp,shell for database [creation,updation,deletion or view of a records in shell], running the server to execute our app. Migrations, migrate etc.,
+
+To execute our app:
+===================
+	- First we need to navigate where manage.py is existing
+	- manage.py runserver
+	* if the python path is not set in environment variables then we need to mention python 
+	- python manage.py runserver
+	- while running the server it creates sqlite file by default
+	- To change the port then we need to use the port numbers as given below
+	- python manage.py runserver 8080
+	
+	=> To run our app in browser then we need to use the ip and port or else by default it can be access the name as "localhost"
+	
+	- localhost:8000
+			(or)
+	- localhost:different port if any conflict
+			(or)
+	- http://127.0.0.1:8000
+	
+	* To break a server we need to use cntrl + c (or) cntrl + b
+	
+To Create Userapp:
+==================
+	- django-admin startapp appname
+			(or)
+	- manage.py startapp appname
+			(or)
+	- python manage.py startapp appname
+
+Created Files in Userapp Creation:
+==================================
+ - init - python interpreter considers as a python file
+ - admin - To display the tables in admin app [django-admin]
+ - apps - To configure in development
+ - views - Main Logic
+ - tests - Test cases Like [unit testing]
+ - models - Database Creations
+
+To access our app we need to configure our user app in settings.py:
+==================================================================
+
+ - INSTALLED_APPS = [
+	.......,
+	'we need to use our appname here',
+	]
+
+Creating our own url:
+=====================
+	path('',views.ourfunctionname,userdefinedname),
+	
+	= In path first parameter is your own path
+	= views.some functioanname => we need to create a function in views.py Its completely our actions
+	= name this can be used in interlink of one template to other 
+	
+ => HttpResponse is for displaying the response but it doesnt display the html content in a browser
+
+
+localhost:8000/ty/11AK1a01219/
+
+Hi Welcome 11AK1a01219
+
+Text => 
+	background => red color,
+	textcolor => blue
+rollno => alert()
+HTML & CSS:
+-------------
+w3schools
+
+<h1>...<h6>
+<p>
+<head>
+<body>
+<html>
+<i>
+<ul>
+<ol>
+<table>
+<th>
+<td>
+<tr>
+<hr>
+<footer>
+<pre>
+<form>
+<input>
+<button>
+<span>
+<a>
+
+<html>
+<head>
+links
+</head>
+<body>
+tags
+</body>
+</html>
+tags
+css
+
+
+1. url => views => response[string]
+2. url => views => html tags [html]
+3. url => views => html,css 
+4. url => views => html,css,javascript
+5. url => views => html file [templates]
+6. url => views => html[form,css] => views
+7. url => views => html[form] => views => html
+
+
+
+03-02-2021:
+===========
+Templates:
+==========
+	foldername for user purpose
+	-> only .html
+	 
+	
+Static File handling:
+=====================
+
+settings.py static
+
+Static:
+=======
+	-> External Files like [css,js,jquery,images,audio/video]
+	-> css => .css
+	-> js => .js
+	-> jquery => .js
+	-> images => .png,.jpg,.jpeg,.gif
+
+DTL => Django Template Language
+  
+syntax: {% load static %}
+
+
+methods: 
+========
+	- GET => by default get will be accessed,Data can be visible in url of a browser,2048 characters
+	- POST => sensitive information it cant displays the data in url,bulk data can be allowed to server to store the information
+
+dtl => form => server 
+	{% csrf_token %}
+
+html => .py[views => controller]
+print(variablename) => server [output]
+
+dtl => Variable => {{varaible_name}}
+
+margin,padding => point => 1 - 5
+
+bootstrap-4
+
+m - x => left,right
+  - y => top,bottom
+
+grid system:
+============
+	- large => lg
+	- medium  => md
+	- small => sm
+	- very small => xm
+
+12 grids 
+	-> 6 6 
+	-> 4 8
+	-> 4 4 4
+	-> 3 6 3
+
+colors => primary,secondary,warning,success,info,danger,light,dark
+
+
+
+
+
+

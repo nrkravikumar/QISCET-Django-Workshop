@@ -1,0 +1,228 @@
+
+01-02-2021:
+===========
+	Good Morning to All..
+
+For registration just proceed to the link
+
+	https://engineering.apssdc.in/register
+	
+* classes
+* objects
+* inheritance
+* packages
+* modules
+* Django introduction
+* MVC architecture
+* MVT architecture
+* Django installation
+* Project creation
+* app creation	
+
+
+Git Version: -> Later
+
+
+
+
+Python:
+=======
+	Data types:
+	------------
+	int,float,string,complex
+	int => integer => 4
+	float => decimal values => 45.00
+	string => single or double quotes
+	complex => ex: 2+4j => real and imaginary values
+	
+	Type casting:
+	-------------
+	int => int()
+	float => float()
+	string => str()
+	
+	Conditional Statements:
+	-----------------------
+	- To check whether a given condirion is either a true or false
+		-> if
+		-> if-else
+		-> nested if
+		-> elsif 
+		
+	-> if(only for singlew condition check)
+	Syntax:
+		if (condition):
+			//stmnts
+	-> if-else(for two cases)
+	Syntax:
+		if (condition):
+			//stmnts
+		else:
+			//stmnts
+	-> nested if (two or more but first if is to be true then checks the inner if condition)
+	Syntax:
+		if (condition1):
+			if (condition2):
+				//stmnts
+		else [optional case for inner if]
+	-> elif => two or more cases
+	Syntax:
+		if (condition1):
+			//stmnt-1
+		elif (condition2):
+			//stmnt-2
+		elif (condition-n):
+			//stmnt-n
+			|       |
+		else:
+			//stmnt-(n-1)
+	
+	Control Statements(or)Loops(or)Iterations(or)Repitition:
+	------------------------------------------------
+	- To control the flow of execution untill a condition is false
+	
+	- for => Known value range
+	Syntax:
+		for i in range(start,stop,skip):
+			//stmnts
+		
+		for i in list,tuple,set,dictionary,string:
+			//stmnts
+		
+		for i in range(stop):
+			//starts from 0 and ends with stop-1
+		
+		range(stop):
+			=> starts from 0 and stops to stop-1
+		range(start,stop):
+			=> starts from exact point and ends to stop-1
+		range(start,stop,step):
+			=> starts from exact point and ends from stop-1 and skips the value from step
+
+
+	- while => Unknown range [infinity Loop]
+	Syntax:
+		while (condition):
+			//stmnts
+	
+functions:
+==========
+Syntax:
+-------
+def functionname():
+	statememnts....
+	
+functionname()
+
+Input:
+======
+3
+3456 2345 1234
+
+output:
+=======
+8
+
+Explanation:
+============
+Max of values in a number
+ = [5+5+4] - [3+2+1]
+ = 14 - 6
+ = 8	
+	
+
+Class: collection of varaibles or methods [final output of a device]
+
+Syntax:
+
+class Add:
+    x = 10
+    y = 20
+	def sqr(a):
+		return a
+s = Add()#object creating
+s.sqr(10)
+class Student:
+   name = 'Sateesh'
+   Rollno = '181abc537'
+   def display(self):
+       print('hello {} number is {}'.format(Student.name,student.Rollno)
+       
+  
+Object: blue print of a class [just a design to manufacture a device]
+class CsE:
+    def __init__(self,name,section):
+		print('hello',name,section)
+	def m(self):
+	    print('this is method')
+
+Inheritance: Acquring the properties from parent to child.
+	- single
+	- multi-level
+	- multiple
+	- Hybrid
+	- Hierarichal
+
+
+class Add:
+    x = 10
+    y = 20
+    def sqr(self,a):
+        return a**2
+s = Add()#object creating
+
+class Student:
+   name = 'Sateesh'
+   Rollno = '181abc537'
+   def display(self):
+       print('hello {} number is {}'.format(Student.name,Student.Rollno))
+class CsE:
+    def __init__(self,name,section):
+        self.name = name
+        self.section = section
+        print('hello',self.name,self.section)
+    def m(self):
+	    print('this is method')
+name = input('enter name:')
+section = input('enter section')
+c = CsE(name,section)
+c.m()
+c.m()
+c.m()
+
+class Parent:
+   money = 100000
+   land = 10
+  
+class Child1(Parent):
+	study = 'B Tech'
+	def properties:
+		print('child1 properties')
+class Child2(Parent):
+	study = 'Degree'
+	def properties:
+		print('child2 properties')
+class A:
+    def m1(self):
+		print('without arg')
+	def m1(self,a):
+		print()
+		
+
+
+Git version:
+=============
+
+Django:
+=======
+
+=> packages and modules
+=> python basics
+=> HTML5,CSS3,Javascript
+=> Bootstrap4
+
+program type:
+	Workshop
+program:
+	source code management git and git version
+
